@@ -10,6 +10,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates=Jinja2Templates(directory="templates")
 
-@app.get("/", reponse_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
     return templates.TemplateResponse(request=request,name="calculator.html")
